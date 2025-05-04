@@ -52,8 +52,8 @@ main {
 .login-box {
     background: white;
     padding: 30px;
-    width: 300px;
-    margin-left: 5px; /* 將原本的 50px 改為 100px */
+    width: 305px;
+    margin-left: 5px;
     border-radius: 4px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -66,8 +66,8 @@ main {
 }
 
 .login-box input {
-    width: 278px;
-    margin: 10px 0;
+    width: 288px;
+    margin: 10px -2px; /* 將原本的 10px 0 改為 10px -10px */
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -88,17 +88,23 @@ main {
     color: white;
     border: none;
     border-radius: 2px;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
     outline: none; /* 移除點擊後黑框 */
     box-shadow: none; /* 確保點擊後不加粗 */
+    margin-top: 21px; /* 增加與上方輸入框的間距 */
 }
 
 .login-options {
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 11px;
     margin: 10px 0;
+}
+
+.login-options a {
+    text-decoration: none; /* 移除底線 */
+    color: #0050af; /* 設定為超連結的藍色 */
 }
 
 .divider {
@@ -115,11 +121,29 @@ main {
 
 .social-login button {
     flex: 1;
-    padding: 8px;
+    padding: 8px 12px;
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 2px;
+    transition: background-color 0.2s;
 }
+
+.social-login button:hover {
+    background-color: #f5f5f5;
+}
+
+.social-icon {
+    width: 18px;
+    height: 19px;
+}
+
 
 footer {
     text-align: center;

@@ -25,13 +25,17 @@
         <input type="password" placeholder="密碼" />
         <button onclick="showPhishingAlert()">登入</button>
         <div class="login-options">
-            <a href="#">忘記密碼</a>
-            <a href="#">使用簡訊登入</a>
+            <a href="https://shopee.tw/buyer/reset">忘記密碼</a>
+            <a href="https://shopee.tw/buyer/login/otp">使用簡訊登入</a>
         </div>
         <div class="divider">或</div>
         <div class="social-login">
-            <button onclick="showPhishingAlert()">Facebook</button>
-            <button onclick="showPhishingAlert()">Google</button>
+            <button onclick="showPhishingAlert()">
+                <img src="fb.png" alt="Facebook" class="social-icon" /> Facebook
+            </button>
+            <button onclick="showPhishingAlert()">
+                <img src="google.png" alt="Google" class="social-icon" /> Google
+            </button>
         </div>
         <p>蝦皮新朋友？<a href="#">註冊</a></p>
     </div>
