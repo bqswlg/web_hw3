@@ -20,3 +20,14 @@ function toggleLoginButtonState() {
 document.querySelectorAll('.login-box input').forEach(input => {
     input.addEventListener('input', toggleLoginButtonState);
 });
+
+// 新增：註冊警告彈窗
+function showRegistrationAlert() {
+    alert("⚠️ 注意！這是一個反詐騙釣魚網頁模擬作業，請勿輸入任何真實帳號密碼！");
+}
+
+// 綁定註冊連結的點擊事件
+document.querySelector('.login-box p a').addEventListener('click', (event) => {
+    event.preventDefault(); // 阻止預設行為
+    showRegistrationAlert();
+});

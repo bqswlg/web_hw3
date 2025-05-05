@@ -40,12 +40,13 @@ main {
     align-items: center;
     justify-content: center;
     height: 555px;
+    max-width: 100%; /* 保留內容寬度限制 */
 }
 
 .left-banner img {
     height: 555px;
     max-width: 100%;
-    margin-top: 5px;
+    margin-top: 4px;
     align-self: flex-end;
 }
 
@@ -106,7 +107,6 @@ main {
     text-align: center; /* 將文字置中 */
     font-size: 12px;
     color: #b1b1b1;
-    font-weight: lighter;
     margin-top: 30px;
     margin-bottom: 0;
 }
@@ -121,7 +121,6 @@ main {
     justify-content: space-between;
     font-size: 11px;
     margin: 10px 0;
-    font-weight: lighter;
 }
 
 .login-options a {
@@ -193,5 +192,97 @@ footer {
     padding: 10px;
     background: #f5f5f5;
     font-size: 12px;
+}
+
+.promo-info h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.promo-info p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.shopee-footer {
+    background-color: #f5f5f5;
+    padding: 40px 10%;
+    font-size: 12px;
+    color: #666;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    width: 18%;
+    margin-bottom: 20px;
+    text-align: left; /* 新增：將內容向左對齊 */
+}
+
+.footer-column h4 {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666;
+}
+
+.payment-logos img{
+    height: 25px;
+    margin: 3px;
+}
+
+.app-links img {
+    height: 20px;
+    margin: 4px;
+}
+
+.app-links {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: flex-start; /* 向左對齊 */
+    margin-left: 10px; /* 與 QR Code 保持間距 */
+    justify-content: flex-start; /* 新增：向上對齊 */
+}
+
+.logistics-logos img {
+    height: 25px;
+    margin: 3px 2px; /* 縮小左右間距 */
+}
+
+.qr-code {
+    width: 80px;
+    height: auto;
+
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    color: #999;
+    font-size: 11px;
+}
+
+.logistics-logos {
+    grid-template-columns: repeat(3, 1fr); /* 每排三個 */
+    justify-items: left;
+    align-items: center; /* 垂直置中 */
 }
 
