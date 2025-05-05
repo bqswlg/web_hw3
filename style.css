@@ -220,13 +220,14 @@ footer {
 .footer-column {
     width: 18%;
     margin-bottom: 20px;
-    text-align: left; /* 新增：將內容向左對齊 */
+    text-align: left;
 }
 
 .footer-column h4 {
     font-size: 14px;
     color: #000;
     margin-bottom: 10px;
+    font-weight: normal;
 }
 
 .footer-column ul {
