@@ -79,20 +79,41 @@ main {
 
 .login-box input:focus {
     border-color: black;
+    color: #000; /* 聚焦時恢復正常顏色 */
 }
 
 .login-box button {
     width: 100%;
     padding: 10px;
-    background-color: #ee4d2d;
+    background-color: #f5a091; /* 初始顏色偏淺 */
     color: white;
     border: none;
     border-radius: 2px;
     font-size: 12px;
-    cursor: pointer;
+    cursor: not-allowed; /* 禁用時的鼠標樣式 */
     outline: none; /* 移除點擊後黑框 */
     box-shadow: none; /* 確保點擊後不加粗 */
     margin-top: 21px; /* 增加與上方輸入框的間距 */
+    transition: background-color 0.3s; /* 增加過渡效果 */
+}
+
+.login-box button.enabled {
+    background-color: #ee4d2d; /* 啟用時恢復原本顏色 */
+    cursor: pointer; /* 啟用時的鼠標樣式 */
+}
+
+.login-box p {
+    text-align: center; /* 將文字置中 */
+    font-size: 12px;
+    color: #b1b1b1;
+    font-weight: lighter;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.login-box p a {
+    color: #ee4d2d; /* 設定顏色為#ee4d2d */
+    text-decoration: none; /* 移除底線 */
 }
 
 .login-options {
@@ -100,6 +121,7 @@ main {
     justify-content: space-between;
     font-size: 11px;
     margin: 10px 0;
+    font-weight: lighter;
 }
 
 .login-options a {
@@ -111,12 +133,33 @@ main {
     text-align: center;
     margin: 10px 0;
     color: #ccc;
+    font-size: 10px; /* 新增縮小字體大小 */
+    position: relative; /* 新增定位 */
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
 }
 
 .social-login {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    margin-top: -12px; /* 增加與上方的間距 */
 }
 
 .social-login button {
@@ -129,7 +172,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    font-size: 14px;
+    font-size: 12px;
     color: #333;
     border-radius: 2px;
     transition: background-color 0.2s;
@@ -151,3 +194,4 @@ footer {
     background: #f5f5f5;
     font-size: 12px;
 }
+
